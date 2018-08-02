@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1533221467173.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3618113034",
+    "id" : "ECA6B3FE",
+    "lastKnownWriteTime" : 1533227009,
+    "last_content_update" : 1533227009609,
+    "path" : "~/Projects/r4ds_aru/r4ds_aru_presentation.Rmd",
+    "project_path" : "r4ds_aru_presentation.Rmd",
+    "properties" : {
+        "cursorPosition" : "15,2",
+        "scrollLine" : "12",
+        "tempName" : "Untitled2"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
