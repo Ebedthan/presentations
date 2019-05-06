@@ -1,0 +1,93 @@
+---
+output: 
+  revealjs::revealjs_presentation:
+    theme: solarized
+    highlight: pygments
+    center: true
+---
+
+<h2>Drawing insight from African data</h2>
+
+<p>Anicet Ebou</p>
+<br />
+<br />
+<br />
+`r icon::fa("twitter")` [\@anicetebou](https://twitter.com/anicetebou) <br />
+`r icon::fa("github")` [ebedthan](https://github.com/ebedthan) <br />
+`r icon::fa("envelope")` [anicet.ebou@gmail.com](mailto:anicet.ebou@gmail.com) <br />
+<br />
+
+## About me
+
+> - I believe in Africa
+> - I believe that I am piece of the change we hope in Africa
+> - I believe that health, tech and education are segments we need to push up in Africa
+> - I'm studying Bioinformatics (And Molecular biology At a PhD level)
+> - I think R before Perl before Python
+
+## What is Africa ?
+
+<img src="https://media.giphy.com/media/k88beywQDnV3G/giphy-downsized.gif" />
+
+## What is Africa ?
+
+> - Africa is a familly
+> - We live in different houses but we are the same
+> - So we have the same problems around differents environments
+> - Conclusion: The pattern of our problems is approximatively the same
+
+## Our problems
+
+> - Education
+> - Health
+> - Social
+> - Energy
+> - etc.
+
+## Why data ?
+
+> - Data can help us awake our spirit
+> - Data can help us take better decisions
+> - Data can help us build better plan
+
+
+## A simple demo
+
+```{r, warning=FALSE,message=FALSE}
+devtools::install_github('ebedthan/afrods')
+library(afrods)
+library(tidyverse)
+```
+```{r}
+waf <- economy %>%
+  filter(region == "Western Africa") %>%
+  select(country, year, `GDP (constant 2000 US$)`) %>%
+  filter(!is.na(`GDP (constant 2000 US$)`)) %>%
+  unique()
+```
+
+## A simple demo
+
+```{r, fig.height=5}
+ggplot(data = waf) + geom_line(mapping = aes(x = year, y = `GDP (constant 2000 US$)`, color = country))
+```
+
+
+## For more precision
+
+```{r, fig.height=5}
+waf_c <- waf %>% filter(country == "Nigeria" | country == "Cote d'Ivoire" | country == "Ghana")
+ggplot(data = waf_c) + geom_line(mapping = aes(x = year, y = `GDP (constant 2000 US$)`, color = country))
+```
+
+## R Consortium
+
+The central mission of the R Consortium is to work with and provide support to the R Foundation and to the key organizations developing, maintaining, distributing and using R software through the identification, development and implementation of infrastructure projects.
+
+##
+<br />
+<br />
+<br />
+`r icon::fa("twitter")` [\@anicetebou](https://twitter.com/anicetebou) &nbsp;
+`r icon::fa("github")` [ebedthan](https://github.com/jimhester) &nbsp;
+`r icon::fa("envelope")` [anicet.ebou@gmail.com](mailto:anicet.ebou@gmail.com)
